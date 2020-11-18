@@ -54,25 +54,28 @@ class _ChooseMonthNewState extends State<ChooseMonthNew> {
             style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Color(0xff9D3D2F),
         ),
-        body: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            MonthButton(0),
-            MonthButton(1),
-            MonthButton(2),
-            MonthButton(3),
-            MonthButton(4),
-            MonthButton(5),
-            MonthButton(6),
-            MonthButton(7),
-            MonthButton(8),
-            MonthButton(9),
-            MonthButton(10),
-            MonthButton(11),
-            Ads(),
-          ],
+        body: Container(
+          color: Colors.white,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: [
+              MonthButton(0),
+              MonthButton(1),
+              MonthButton(2),
+              MonthButton(3),
+              MonthButton(4),
+              MonthButton(5),
+              MonthButton(6),
+              MonthButton(7),
+              MonthButton(8),
+              MonthButton(9),
+              MonthButton(10),
+              MonthButton(11),
+              Ads(),
+            ],
+          ),
         ));
   }
 }

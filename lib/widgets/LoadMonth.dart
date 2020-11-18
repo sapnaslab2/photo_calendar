@@ -1,20 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LoadMonth extends StatelessWidget {
-  var months = [
-    'ଜାନୁଆରୀ',
-    'ଫେବୃଆରୀ',
-    'ମାର୍ଚ୍ଚ',
-    'ଏପ୍ରିଲ୍',
-    'ମେ',
-    'ଜୁନ୍',
-    'ଜୁଲାଇ',
-    'ଅଗଷ୍ଟ',
-    'ସେପ୍ଟେମ୍ବର',
-    'ଅକ୍ଟୋବର',
-    'ନଭେମ୍ବର',
-    'ଡିସେମ୍ବର'
-  ];
+  var months = ['ଜାନୁଆରୀ', 'ଫେବୃଆରୀ', 'ମାର୍ଚ୍ଚ', 'ଏପ୍ରିଲ୍', 'ମେ', 'ଜୁନ୍', 'ଜୁଲାଇ', 'ଅଗଷ୍ଟ', 'ସେପ୍ଟେମ୍ବର', 'ଅକ୍ଟୋବର', 'ନଭେମ୍ବର', 'ଡିସେମ୍ବର'];
   String monthName;
   int monthNum;
   final _selectedDay = DateTime.now();
@@ -22,11 +9,7 @@ class LoadMonth extends StatelessWidget {
   String date;
   LoadMonth(this.monthName, this.monthNum) {
     month = _selectedDay.month;
-    date = _selectedDay.day.toString() +
-        "-" +
-        _selectedDay.month.toString() +
-        "-" +
-        _selectedDay.year.toString();
+    date = _selectedDay.day.toString() + "-" + _selectedDay.month.toString() + "-" + _selectedDay.year.toString();
   }
 
   @override
@@ -34,9 +17,7 @@ class LoadMonth extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
             gradient: new LinearGradient(
-          colors: month - 1 == monthNum
-              ? [Colors.white, Colors.greenAccent]
-              : [Colors.redAccent, Colors.white],
+          colors: month - 1 == monthNum ? [Color(0xff9D3D2F), Colors.white] : [Color(0xffB3B6B4), Colors.white],
           begin: Alignment.centerRight,
           end: new Alignment(-1.0, -1.0),
         )),
@@ -46,7 +27,7 @@ class LoadMonth extends StatelessWidget {
                 // subtitle: Text('$date'),
                 leading: Icon(
                   Icons.calendar_today_rounded,
-                  color: Colors.black,
+                  color: Color(0xff7D3A2F),
                 ),
                 title: Text(
                   months[monthNum] + "  ( $date )",
@@ -56,7 +37,7 @@ class LoadMonth extends StatelessWidget {
             : ListTile(
                 leading: Icon(
                   Icons.calendar_today_rounded,
-                  color: Colors.black,
+                  color: Color(0xff7D3A2F),
                 ),
                 title: Text(
                   months[monthNum],

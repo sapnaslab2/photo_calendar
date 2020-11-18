@@ -8,7 +8,7 @@ class Ads extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
         child: ListTile(
           title: Text(
-            "Ads are loading...",
+            "ଆଉରି ଜିନିଷ ଦେଖିବାପାଇଁ ଆପଣଙ୍କର ଇଣ୍ଟେର୍ନେଟ ଚାଲୁ କରନ୍ତୁ",
           ),
         ));
   }

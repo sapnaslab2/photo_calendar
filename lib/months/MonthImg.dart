@@ -23,7 +23,7 @@ class _MonthImgState extends State<MonthImg> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Color(0xff9D3D2F),
         title: Text(
           '$_monthName',
           style: TextStyle(fontSize: 25),
@@ -33,7 +33,7 @@ class _MonthImgState extends State<MonthImg> {
       body: Container(
         child: PhotoView(
           backgroundDecoration: BoxDecoration(
-            color: Colors.white,
+            color: Color(0xffB3B6B4),
           ),
           maxScale: PhotoViewComputedScale.contained * 4.0,
           minScale: PhotoViewComputedScale.contained * 1.0,
@@ -41,39 +41,36 @@ class _MonthImgState extends State<MonthImg> {
         ),
       ),
       floatingActionButton: Row(
-        children: [
-          Container(
-            padding: EdgeInsets.fromLTRB(80, 20, 20, 500),
-            child: FloatingActionButton.extended(
-              heroTag: null,
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, _prevMonth);
-              },
-              icon: null,
-              label: Text(
-                '<',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-              backgroundColor: Colors.redAccent,
-            ),
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          FloatingActionButton(
+            heroTag: 'unq1',
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, _prevMonth);
+            },
+            materialTapTargetSize: MaterialTapTargetSize.padded,
+            backgroundColor: Color(0xff7D3A2F),
+            child: const Icon(Icons.navigate_before_rounded, size: 36.0),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0)), side: BorderSide(color: Color(0xff9D3D2F), width: 3.0)),
           ),
-          Container(
-            padding: EdgeInsets.fromLTRB(100, 20, 10, 500),
-            child: FloatingActionButton.extended(
-              heroTag: null,
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, _nextMonth);
-              },
-              icon: null,
-              label: Text(
-                ">",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-              backgroundColor: Colors.redAccent,
-            ),
+          AspectRatio(
+            aspectRatio: 3 / 13,
+          ),
+          FloatingActionButton(
+            heroTag: 'unq2',
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, _nextMonth);
+            },
+            materialTapTargetSize: MaterialTapTargetSize.padded,
+            backgroundColor: Color(0xff7D3D2F),
+            child: const Icon(Icons.navigate_next_rounded, size: 36.0),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0)), side: BorderSide(color: Color(0xff9D3D2F), width: 3.0)),
           ),
         ],
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
     );
   }
 }
