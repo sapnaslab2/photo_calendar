@@ -17,10 +17,10 @@ class LoadMonth extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
             gradient: new LinearGradient(
-          colors: month - 1 == monthNum ? [Color(0xff9D3D2F), Colors.white] : [Color(0xffB3B6B4), Colors.white],
-          begin: Alignment.centerRight,
-          end: new Alignment(-1.0, -1.0),
-        )),
+              colors: month - 1 == monthNum ? [Color(0xff9D3D2F), Colors.white] : [Color(0xffB3B6B4), Colors.white],
+              begin: Alignment.centerRight,
+              end: new Alignment(-1.0, -1.0),
+            )),
         margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
         child: month - 1 == monthNum
             ? ListTile(

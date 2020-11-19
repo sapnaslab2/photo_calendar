@@ -14,7 +14,7 @@ class CalendarApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => ChooseMonthNew(),
-        '/Jan': (context) => MonthImg('images/Jan.jpg', 'ଜାନୁଆରୀ', '/', '/Feb'),
+        '/Jan': (context) => MonthImg('images/Jan.jpg', 'ଜାନୁଆରୀ', '', '/Feb'),
         '/Feb': (context) => MonthImg('images/Feb.jpg', 'ଫେବୃଆରୀ', '/Jan', '/March'),
         '/March': (context) => MonthImg('images/March.jpg', 'ମାର୍ଚ୍ଚ', '/Feb', '/April'),
         '/April': (context) => MonthImg('images/April.jpg', 'ଏପ୍ରିଲ୍', '/March', '/May'),
@@ -25,7 +25,7 @@ class CalendarApp extends StatelessWidget {
         '/Sep': (context) => MonthImg('images/Sep.jpg', 'ସେପ୍ଟେମ୍ବର', '/Aug', '/Oct'),
         '/Oct': (context) => MonthImg('images/Oct.jpg', 'ଅକ୍ଟୋବର', '/Sep', '/Nov'),
         '/Nov': (context) => MonthImg('images/Nov.jpg', 'ନଭେମ୍ବର', '/Oct', '/Dec'),
-        '/Dec': (context) => MonthImg('images/Dec.jpg', 'ଡିସେମ୍ବର', '/Nov', '/'),
+        '/Dec': (context) => MonthImg('images/Dec.jpg', 'ଡିସେମ୍ବର', '/Nov', ''),
       },
     );
   }
